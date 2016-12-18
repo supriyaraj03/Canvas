@@ -9,10 +9,13 @@ import createCanvas
 # Used to print the matrix in a canvas format
 #############################################
 def printFunction(matrix , height):
-    for row in matrix:
-        for val in row:
-            print(val, end=" ")
-        print()
+    printTemp_matrix = [row[:] for row in matrix]
+    stopWords = ["[", "'", "]", ","]
+    for i in range(0 , height+2):
+        for j in stopWords:
+            printTemp_matrix[i] = str(printTemp_matrix[i]).replace(j,"")
+        printTemp_matrix[i] = printTemp_matrix[i].replace('0' , " ")
+        print(printTemp_matrix[i])
         
 
 ####################################

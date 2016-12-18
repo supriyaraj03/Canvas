@@ -16,7 +16,7 @@ def create_Canvas(inputVal):
     except ValueError:
         sys.exit('Width and height should be positive integer')
     
-    matrix = [[' ' for x in range(width)] for y in range(height+2)] 
+    matrix = [['0' for x in range(width)] for y in range(height+2)] 
     for i in range(0,height+2):
         if((i == 0) or (i == height+1)):
             for j in range(0,width):
