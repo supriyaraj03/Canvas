@@ -3,6 +3,7 @@ import sys
 import drawLine
 import drawRectangle
 import createCanvas
+import bucketFill
 
 
 #############################################
@@ -53,5 +54,5 @@ def performOperation(inputVal , canvas=False):
     elif (inputVal[0] == 'R'):
         op = drawRectangle.createRectangle(inputVal , canvas)
     elif (inputVal[0] == 'B'):
-        print("Needs clarification")
+        op = bucketFill.fillBucket(inputVal , canvas)
     return op   
