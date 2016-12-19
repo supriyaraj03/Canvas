@@ -7,6 +7,7 @@ import wrapper
 # Draw a rectangle on the canvas using the provided coordinates (x1, y1, x2, y2)
 ################################################################################
 def createRectangle(inputVal , canvas):
+    
     split_input = str.split(inputVal , ' ')
     canvas_width = len(canvas[1])-2
     canvas_height = len(canvas)-2
@@ -44,5 +45,6 @@ def createRectangle(inputVal , canvas):
             canvas[i][x1] = 'x'
             canvas[i][x2] = 'x'
         
-    wrapper.printFunction(canvas , canvas_height)    
+    wrapper.printFunction(canvas , canvas_height) 
+    
     return(canvas)

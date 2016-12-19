@@ -42,5 +42,6 @@ def createLine(inputVal , canvas):
             for i in range(x2,(x1+1)):
                 canvas[y1][i] = 'x'                
             
-    wrapper.printFunction(canvas , canvas_height)    
+    wrapper.printFunction(canvas , canvas_height)
+    
     return(canvas)
