@@ -25,5 +25,5 @@ def create_Canvas(inputVal):
             matrix[i][0] = '|'
             matrix[i][width-1] = '|'
     wrapper.printFunction(matrix , height)
-    print(matrix)
+    
     return(matrix)
