@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import wrapper
+import numpy as np
 from numpy import array
 import sys
 
@@ -8,6 +9,7 @@ import sys
 ################################################################################
 
 def fillBucket(inputVal, canvas):
+    
     split_input = str.split(inputVal , ' ')
     canvas_width = len(canvas[1])-2
     canvas_height = len(canvas)-2
@@ -35,7 +37,6 @@ def fillBucket(inputVal, canvas):
                      
     while stack:
         x, y = stack.pop()
-        print(x,y)
         if canvas[x, y] == orig_value:
             canvas[x, y] = fill_value
             if x > 0:
@@ -46,7 +47,9 @@ def fillBucket(inputVal, canvas):
                 stack.add((x, y - 1))
             if y < (ysize - 1):
                 stack.add((x, y + 1))
-
+    
+    canvas = np.array(canvas).tolist()
+    
     wrapper.printFunction(canvas , (len(canvas)-2))
-
+    
     return (canvas)
